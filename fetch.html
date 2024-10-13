@@ -1,0 +1,119 @@
+<!-- <script>
+    fetch("https://jsonplaceholder.typicode.com/posts")
+    .then((response)=> response.text())
+    .then((data) => {
+         document.write(data)
+      
+        } );
+</script> -->
+
+<!-- To fetch the data from the given link -->
+
+<!-- <script>
+    fetch('Content/json/student_data1.json') 
+    .then((response)=> response.json())
+    .then((data) => {
+        console.log(data)
+        for(let i in data){
+            var c = `${data[i].name} - ${data[i].age} - ${data[i].city}  <br>`
+            console.log(c)
+            document.write(c)
+            
+        }
+    })
+    .catch((error) => document.write("Can't fetch data"));
+</script> -->
+
+<!-- To put the data on the server -->
+
+ 
+
+<!-- <script>
+
+let obj1 = {
+    title: 'food',
+    body: 'barr',
+    userId: 1,
+  } 
+
+    fetch('https://jsonplaceholder.typicode.com/posts', {
+  method: 'POST',
+  body: JSON.stringify( obj1 ),
+  headers: {
+    'Content-type': 'application/json; charset=UTF-8',
+  },
+})
+  .then((response) => response.json())
+  .then((json) => console.log(json));
+</script> -->
+
+<!-- To update the data on the server -->
+
+<!-- <script>
+
+    let obj2  = {
+    id: 1,
+    title: 'fooddey',
+    body: 'baraaarryy',
+    userId: 1,
+  };
+
+    fetch('https://jsonplaceholder.typicode.com/posts/1', {
+  method: 'PUT',
+  body: JSON.stringify(obj2),
+  headers: {
+    'Content-type': 'application/json; charset=UTF-8',
+  },
+})
+  .then((response) => response.json())
+  .then((json) => console.log(json));
+</script> -->
+
+<!-- To delete the data 'there should be id in the last of link getting end' -->
+  
+<!-- <script>
+    fetch('https://jsonplaceholder.typicode.com/posts/2', {
+  method: 'DELETE',
+});
+</script> -->
+
+ <!-- To fill the form data on server/ sent the all the entities of from data in one go -->
+
+ <body>
+        <form id="myForm">
+    Title <input type="text" id="titleText">  <br><br>
+    Body <input type="text" id="bodyText"> <br><br>
+    UserID <input type="text" id="userId">  <br><br>
+    <input type="submit" id="saveForm">
+    </form>
+</body> 
+    <script>
+    document.getElementById("saveForm").addEventListener("click", function(e){
+        e.preventDefault();
+        
+         // var obj = {
+         // title : document.getElementById("titleText").value,
+         // body : document.getElementById("bodyText").value,
+         // userID : document.getElementById("userId").value
+    // };
+
+    fetch('https://jsonplaceholder.typicode.com/posts', {
+  method: 'POST',
+//   body: JSON.stringify(obj),
+  body: new FormData(document.getElementById("myForm")), 
+  headers: {
+    // 'Content-type': 'application/json; charset=UTF-8',
+    'Content-type': 'application/x-www-form-urlencoded',
+  },
+})
+  .then((response) => response.json())
+  .then((json) => console.log(json))
+  .catch((error) => console.error('Error:', error))
+
+
+} );
+
+</script>
+
+
+ 

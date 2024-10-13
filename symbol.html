@@ -1,0 +1,30 @@
+<!-- <script>   // when we want to use unique value in our coding.
+    let id = Symbol("Hello");
+    console.log(id);
+    alert(id.toString());
+    alert(id.description);
+    console.log(id.description);
+</script> -->
+
+<script>
+    let age = Symbol("age");
+    
+    let user = {
+        name : "Yahoo baba",
+        class : "Btech",
+       // [age] : 25
+    };
+    
+    user[age] = 26;   // object with symbol --- they can not be revealed through the loop
+    user["gender"] = "Male";  // To insert the key in object
+
+    console.log(user);
+    console.log(user.class);
+    console.log(user[age]);
+    console.log(user);
+
+    console.log(JSON.stringify(user));   // Symbol value will get excluded while changing in json formate.
+    // for(let key in user){
+    //     console.log(key);
+    // }
+</script>

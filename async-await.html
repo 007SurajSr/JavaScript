@@ -1,0 +1,98 @@
+<!-- async funtion and its way of writing -->
+
+<!-- <script>
+    async function test() {
+        return 'hello'
+    }
+    
+    test().then((result) => console.log(result));
+</script> -->
+
+<!-- <script>
+    let test = async function(){
+        return "Hello"
+    }
+    test().then((result) => {
+        console.log(result);
+    })
+
+</script> -->
+
+<!-- <script>
+    let test1 = async () =>{
+      return "Helllo"
+
+    }
+    test1().then((result)=> {
+        console.log(result);
+    })
+</script> -->
+
+
+<!-- await function -->
+
+<!-- <script>
+    async function test(){
+        console.log("2: Message");
+       await console.log("3: Message");
+       console.log("4 : Messaage");
+    }
+
+    console.log("1: Message");
+    test();
+    console.log("5: Message");
+</script> -->
+
+
+<!-- <script>
+    async function test(){
+        console.log("2: Message");
+        const response = await fetch("Content/json/student_data.json");
+        console.log("3: Message");
+        const student = await response.json();
+        
+        return student;
+         
+    }
+
+    console.log("1: Message");
+    let a = test();
+    console.log("4: Message");
+    console.log(a); 
+</script> -->
+
+<!-- <script>
+    async function test(){
+        const response = await fetch("Content1/json/student_data.json");
+        const student = await response.json();
+        
+        return student;
+         
+    }
+
+    test().then((res)=> console.log(res)).catch((error)=>
+console.log(error));
+     
+</script> -->
+
+<!-- <script>
+    async function test() {
+        return (await fetch("Content/json/student_data.json")).json();
+        
+    }
+    test().then((res)=>console.log(res)).catch((err)=>console.log(err));
+</script> -->
+
+<script>
+    async function test(){
+        try {
+            const response = await fetch("Content/json/student_data.json");
+            const student = await response.json();
+
+            return student;
+        } catch (error) {
+            console.log(error);
+        }
+    }
+    test().then((res)=>console.log(res));
+</script>

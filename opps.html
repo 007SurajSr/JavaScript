@@ -1,0 +1,86 @@
+<!-- Types of constructor function and their operatiions
+ constructor-- (get called automatically), prototype-- (we need to call it by making an object), static--(we can call it directy using classname.) -->
+
+ <script> 
+class student {
+    constructor(name,age,salary){
+        this.studentName = name;
+        this.studentAge = age;
+        this.studentSalary = salary;
+        console.log("constructor function");
+    }
+    hello() {
+        document.write(`Hello ${this.studentName} your age is ${this.studentAge} and this is your salary ${this.studentSalary}`);
+    }
+    static staticMethod() {
+        console.log("Static function");
+    }
+}
+
+let a1 = new student('samsumg', 15, 16000);
+a1.hello();
+student.staticMethod();
+
+</script>
+
+
+ <!-- Inheritance  -->
+<script>
+  class employee {
+    constructor(name,salary){
+        console.log("constructor: employee : " + name + "and this is your total salary " + salary);
+    }
+}
+
+class managet extends employee{
+    constructor(name, salary){
+        super();
+        console.log("constructor: Manager : " + name + " And this is your total salary " + salary );
+    }
+}
+let b1 = new managet("yahoo singh", 200000);
+
+</script>
+
+<script>
+    class employee1 {
+        constructor(name, age, salary){
+            this.name = name;
+            this.age = age;
+            this.salary = salary;
+            console.log("constructor : Employee");
+
+        }
+        info() {
+            document.write(`<h3> Employee class </h3>
+                Name : ${this.name } <br>
+                Age  : ${this.age} <br>
+                Salary : ${this.salary} <br>`);
+        }
+    }
+
+    class manager1 extends employee1 {
+         
+        info(){
+            let ta = 1000;
+            let pa = 300;
+            let totalsalary = this.salary + ta + pa;
+
+            document.write(`<h3> Manager Class </h3>
+                Name : ${this.name} <br>
+                Age : ${this.age} <br>
+                Salary : ${totalsalary} <br>`);
+        }
+    }
+
+    class test extends manager1{
+
+    }
+
+    let a = new employee1("Ram kumar", 22, 13000); 
+    let b = new manager1("Sandeep Kumar", 26, 30000);
+    let c = new test( "Yahoo", 30, 15000);
+    a.info();
+    b.info();
+    c.info();
+</script>

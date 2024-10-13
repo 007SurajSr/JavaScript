@@ -1,0 +1,24 @@
+<script>
+    var obj1 = {
+        name : 'Yahoo baba'
+    };
+     var obj2 = {
+        age : 23
+     };
+     var obj3 =  {obj1,obj2};
+     console.log(obj3);
+</script>
+
+<script>
+    var name1 = "Yahoo"
+    var lname1  = "baba"
+    var course1 = "Btech"
+
+    function student1(name1, lname1, course1){
+        let fulname = name1 + " " + lname1;
+        return {fulname, course1};
+    }
+    let s = student1(name1, lname1, course1);
+    console.log(s.fulname);
+    console.log(s.course1);
+</script>

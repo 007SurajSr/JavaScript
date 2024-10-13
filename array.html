@@ -1,0 +1,55 @@
+
+<!-- Property extraction -->
+<script>
+    let user3 = ["Yahoo baba", 22, 'Delhi', ["male", 25000]];
+
+    let [name1, age1, city, [gender, salary]] = user3
+        console.log(name1);
+        console.log(age1);
+        console.log(city);
+        console.log(gender);
+        console.log(salary);
+     
+</script>
+
+
+
+<!-- Function with parameters -->
+<script>
+    function user1(name, age, state){
+        console.log(name);
+        console.log(age);
+        console.log(state);
+    }
+    user1('sameer', 23, 'delhi');
+</script>
+
+
+<!-- function name with array -->
+<script>
+    function user2([name, age, state]){
+        console.log(name);
+        console.log(age);
+        console.log(state);
+    }
+    user2(['sameer', 23, 'delhi']);
+</script>
+
+
+ <!-- function with return only -->
+
+<script>
+    function user() {
+        return ['Yahoo baba', 23, 'Delhi'];
+    }
+    let [name, age, state] = user();
+    console.log(name);
+    console.log(age);
+    console.log(state);
+</script>
+
+ 
+
+ 
+
+ 
