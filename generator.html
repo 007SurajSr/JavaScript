@@ -1,0 +1,131 @@
+<!-- <script>
+    function *generatorit(){
+    console.log("First message");
+    yield "Stopped after first console"
+    console.log("Second message");
+    }
+
+    let g = generatorit();
+    console.log(g.next());
+    console.log(g.next());
+    console.log(g.next());
+     
+</script> -->
+
+  <!-- <script>
+    function *generatorit(){
+     
+    yield "Stopped after first console",
+    yield "Stopped after second console",
+    yield "Stopped after third console"
+     
+}
+
+    let g = generatorit();
+    console.log(g.next());
+    g.next()
+    console.log(g.next().value);
+    console.log(g.next());
+     
+
+</script> -->
+
+<!-- <script>
+    function *generatorit(){
+     
+    yield "Stopped after first console",
+    yield "Stopped after second console",
+    yield "Stopped after third console"
+     }
+
+    let g = generatorit();
+    for(let value of g){
+        console.log(value)
+    }
+     
+     
+
+</script> -->
+
+<!-- <script>
+    function *generatorit(){
+        let nextNum = 300;
+        while (true) {
+            yield(nextNum++);
+        }
+    }
+    let g = generatorit();
+    console.log(g.next());
+    console.log(g.next());
+
+</script> -->
+
+<!-- <script>
+    function *generatorit(){
+        let nextNum = 300;
+        while (true) {
+            yield(nextNum++);
+        }
+    }
+    let g = generatorit();
+    for(let value of g) {
+        if(value> 305) break;
+        console.log(value);
+    }
+
+</script> -->
+
+<!-- <script>
+    function *generatorit(){
+    // let result = yield;
+    let yArray = [yield,yield,yield]
+    console.log(`Result : ${yArray[2]}`);
+    }
+
+    let g = generatorit();
+    g.next();
+    g.next(5000);
+    g.next(800);
+    g.next(7000);
+    g.next(7000);
+</script> -->
+
+<!-- <script>
+    function *generatorit(){
+yield 55;
+yield* ['node','angular','react'];
+    }
+    let g = generatorit();
+    console.log(g.next().value );
+    console.log(g.next().value );
+    console.log(g.next().value );
+    console.log(g.next().value );
+    console.log(g.next().value );
+
+</script> -->
+
+<!-- <script>
+    function *generatorit(){
+        yield 'php';
+        yield 'node';
+        yield 'angular';
+        yield 'react';
+    }
+    let g = generatorit();
+    console.log(g.next().value);
+    console.log(g.next().value);
+    console.log([...g]);
+</script> -->
+
+<script>
+    function *generatorit(){
+        yield 'php';
+        yield 'node';
+        yield 'angular';
+        yield 'react';
+    }
+    let g = generatorit();
+    console.log(g.next().value);
+    console.log(g.return("Ending here and no further values available"));
+    console.log(g.next().value);
+</script>
