@@ -1,0 +1,68 @@
+<!-- <script>
+    let numbers = ["100","200","300","400","500"];  // Array
+    let iter = numbers[Symbol.iterator]();
+    
+    let result = iter.next();
+
+   while(!result.done){
+    console.log(result.value);
+    result = iter.next(); 
+   }
+    console.log(iter.next());
+    console.log(iter.next().done);
+
+</script> -->
+
+<!-- <script>
+    let str1 = " yahoo baba";
+    for(let char of str1){
+        console.log(char);
+    }
+</script> -->
+
+<!-- <script>
+    let string = "Yahoo baba";       // string
+    let iter1 = string[Symbol.iterator]();
+    
+    let result1 = iter1.next();
+
+   while(!result1.done){
+    console.log(result1.value);
+    result1 = iter1.next(); 
+   }
+    console.log(iter1.next());
+    console.log(iter1.next().done);
+
+</script> -->
+
+<script>
+    function numberIterator(arr){
+        var nextNum = 0;
+        return {
+            next(){
+                if(nextNum < arr.length){
+                   return{
+                    value : arr[nextNum++],
+                    done : false
+                   }
+                }else{
+                    return{
+                        done : true
+                    }
+                }
+                
+            }
+        }
+    }
+    let numbers = [100,200,300,400,500];
+    let num = numberIterator(numbers);
+    console.log(num.next());
+    console.log(num.next());
+    num.next();
+    console.log(num.next());
+    console.log(num.next());
+    console.log(num.next());
+    console.log(num.next());
+    console.log(num.next());
+
+</script>
